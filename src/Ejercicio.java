@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -99,10 +102,18 @@ public class Ejercicio extends javax.swing.JFrame {
     private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
         // TODO add your handling code here:
         String texto = txtTexto.getText();
-        
+        devuelve_Mayuscula(texto);
         
     }//GEN-LAST:event_btnCambiarActionPerformed
-
+ 
+    public void devuelve_Mayuscula(String texto){
+        String may;
+        may=texto.toUpperCase();
+        
+        lblMensaje.setText(may);
+    
+    }
+    
     /**
      * @param args the command line arguments
      */
