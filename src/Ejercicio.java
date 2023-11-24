@@ -39,6 +39,12 @@ public class Ejercicio extends javax.swing.JFrame {
 
         jLabel1.setText("jLabel1");
 
+        txtTexto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTextoKeyTyped(evt);
+            }
+        });
+
         lblMensaje.setText("jLabel2");
 
         jLabel3.setText("jLabel3");
@@ -101,10 +107,15 @@ public class Ejercicio extends javax.swing.JFrame {
 
     private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
         // TODO add your handling code here:
-        String texto = txtTexto.getText();
-        devuelve_Mayuscula(texto);
+        
         
     }//GEN-LAST:event_btnCambiarActionPerformed
+
+    private void txtTextoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTextoKeyTyped
+        // TODO add your handling code here:
+        String texto = txtTexto.getText();
+        devuelve_Mayuscula(texto);
+    }//GEN-LAST:event_txtTextoKeyTyped
  
     public void devuelve_Mayuscula(String texto){
         String may;
