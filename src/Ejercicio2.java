@@ -112,7 +112,6 @@ public class Ejercicio2 extends javax.swing.JFrame {
     
   
          lblMensaje1.setText(resultado);
-    
     }
 
 // Método para convertir un texto a mayúsculas
