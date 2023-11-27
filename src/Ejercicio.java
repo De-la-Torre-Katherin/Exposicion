@@ -105,9 +105,6 @@ public class Ejercicio extends javax.swing.JFrame {
       
    
     String resultado = convertirAMayusculas(texto);
-     if (lblMensaje1 == null) {
-        lblMensaje1 = new JLabel(); 
-    }
     
     lblMensaje1.setText( resultado);
   }
