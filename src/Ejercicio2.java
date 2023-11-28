@@ -1,5 +1,4 @@
 
-import javax.swing.JLabel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -43,6 +42,14 @@ public class Ejercicio2 extends javax.swing.JFrame {
                 txtTextoActionPerformed(evt);
             }
         });
+        txtTexto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtTextoKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTextoKeyTyped(evt);
+            }
+        });
 
         btnCambiar.setText("CAMBIAR");
         btnCambiar.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +77,12 @@ public class Ejercicio2 extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(lblPalabras)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblMensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(44, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,8 +97,8 @@ public class Ejercicio2 extends javax.swing.JFrame {
                             .addComponent(lblPalabras, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(lblMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCambiar)
                 .addContainerGap(77, Short.MAX_VALUE))
         );
@@ -105,13 +114,7 @@ public class Ejercicio2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         
-        String texto = txtTexto.getText();
-    
-    // Llamar al método para convertir a mayúsculas
-    String resultado = convertirAMayusculas(texto);
-    
-  
-         lblMensaje1.setText(resultado);
+      
     }
 
 // Método para convertir un texto a mayúsculas
@@ -119,6 +122,36 @@ public static String convertirAMayusculas(String texto) {
     // Utilizar el método toUpperCase() para convertir el texto a mayúsculas
     return texto.toUpperCase();
     }//GEN-LAST:event_btnCambiarActionPerformed
+
+    private void txtTextoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTextoKeyReleased
+        // TODO add your handling code here:
+         
+    }//GEN-LAST:event_txtTextoKeyReleased
+
+    private void txtTextoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTextoKeyTyped
+        // TODO add your handling code here:
+                        
+           // ingresar texto desde el campo de texto
+          String texto = txtTexto.getText();
+
+                   //metodo
+     String resultado = convertirAMayusculas(texto);
+
+// para que nos debuelva cado de texto
+         txtTexto.setText(resultado);
+         
+         //verifica si el texto ingrasado esat en mayusculas si es asi nos dara eeror y y es a lo contrario nos dara corecto
+  
+         if (resultado.equals(texto)) {
+         
+             lblMensaje1.setText("ERROR: Ingrese palabras en minúsculas:" +resultado);
+      
+         } else  {
+      
+             lblMensaje1.setText("Correcto as ingrasado palabra en  minusculas  ");
+      }
+
+    }//GEN-LAST:event_txtTextoKeyTyped
 
     /**
      * @param args the command line arguments
