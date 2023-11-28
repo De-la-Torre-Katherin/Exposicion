@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.util.Locale;
 import javax.swing.JLabel;
 
 /*
@@ -29,20 +30,12 @@ public class Ejemplo2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btncambiar = new javax.swing.JButton();
         lblingresar = new javax.swing.JLabel();
         txtTexto = new javax.swing.JTextField();
         lblMensaje1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        btncambiar.setText("canbiar");
-        btncambiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncambiarActionPerformed(evt);
-            }
-        });
 
         lblingresar.setText("ingresar texto:");
 
@@ -59,18 +52,13 @@ public class Ejemplo2 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(btncambiar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblingresar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39)
-                                .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(lblingresar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -88,9 +76,7 @@ public class Ejemplo2 extends javax.swing.JFrame {
                     .addComponent(lblingresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(lblMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btncambiar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
+                .addGap(118, 118, 118))
         );
 
         pack();
@@ -111,19 +97,16 @@ public class Ejemplo2 extends javax.swing.JFrame {
        lblMensaje1.setText("ERROR: Ingrese palabras en minúsculas 😀😀 " + resultado);
        }  else {
   
-           lblMensaje1.setText("Correcto as ingrasado palabras en minusculas ");
+           lblMensaje1.setText("Correcto as ingrasado palabras en minusculas 😊🎉🎊");
         }
            
     }//GEN-LAST:event_txtTextoKeyTyped
 
-    private void btncambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncambiarActionPerformed
+    public String  convertirAMayusculas(String texto){
+       
+        return texto.toUpperCase();
+     
     }
-public static String convertirAMayusculas(String texto) {
-
-            return texto.toUpperCase();
-    }//GEN-LAST:event_btncambiarActionPerformed
-
-   
     /**
      * @param args the command line arguments
      */
@@ -160,7 +143,6 @@ public static String convertirAMayusculas(String texto) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btncambiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblMensaje1;
     private javax.swing.JLabel lblingresar;
