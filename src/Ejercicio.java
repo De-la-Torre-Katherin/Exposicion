@@ -31,7 +31,7 @@ public class Ejercicio extends javax.swing.JFrame {
 
         btnCambiar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        lblMensaje1 = new javax.swing.JLabel();
+        lblMensaje = new javax.swing.JLabel();
         lbltexto = new javax.swing.JLabel();
         txtTexto = new javax.swing.JTextField();
 
@@ -61,20 +61,21 @@ public class Ejercicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(lbltexto)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(68, 68, 68)
-                                .addComponent(btnCambiar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(54, 54, 54)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbltexto)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(68, 68, 68)
+                                        .addComponent(btnCambiar))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(54, 54, 54)
+                                        .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -86,12 +87,12 @@ public class Ejercicio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lbltexto)
-                        .addGap(40, 40, 40))
+                        .addGap(37, 37, 37))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(38, 38, 38)
+                        .addGap(31, 31, 31)))
+                .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
                 .addComponent(btnCambiar)
                 .addGap(84, 84, 84))
         );
@@ -103,21 +104,23 @@ public class Ejercicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         String texto = txtTexto.getText();
-      
-   
-    String resultado = convertirAMayusculas(texto);
+        devuelve_Mayuscula(texto);
+                                  
+ 
     
-    lblMensaje1.setText( resultado);
       
     }//GEN-LAST:event_txtTextoKeyTyped
 
     private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
-    }
-    public static String convertirAMayusculas(String texto) {
-
-            return texto.toUpperCase();
+   
     }//GEN-LAST:event_btnCambiarActionPerformed
-
+    public void devuelve_Mayuscula(String texto){
+        String may;
+        may=texto.toUpperCase();
+        
+        lblMensaje.setText(may);
+    
+    }
     /**
      * @param args the command line arguments
      */
@@ -160,7 +163,7 @@ public class Ejercicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCambiar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblMensaje1;
+    private javax.swing.JLabel lblMensaje;
     private javax.swing.JLabel lbltexto;
     private javax.swing.JTextField txtTexto;
     // End of variables declaration//GEN-END:variables

@@ -89,7 +89,7 @@ public class Ejemplo2 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btncambiar)
+                .addComponent(btncambiar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(83, 83, 83))
         );
 
@@ -123,7 +123,7 @@ public static String convertirAMayusculas(String texto) {
             return texto.toUpperCase();
     }//GEN-LAST:event_btncambiarActionPerformed
 
-    
+   
     /**
      * @param args the command line arguments
      */
