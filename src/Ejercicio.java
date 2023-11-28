@@ -101,12 +101,7 @@ public class Ejercicio extends javax.swing.JFrame {
 
     private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
 
-    String texto = txtTexto.getText();
-      
    
-    String resultado = convertirAMayusculas(texto);
-    
-    lblMensaje1.setText( resultado);
   }
 public static String convertirAMayusculas(String texto) {
    
@@ -116,7 +111,12 @@ public static String convertirAMayusculas(String texto) {
     private void txtTextoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTextoKeyTyped
         // TODO add your handling code here:
         
-       
+        String texto = txtTexto.getText();
+      
+   
+    String resultado = convertirAMayusculas(texto);
+    
+    lblMensaje1.setText( resultado);
       
     }//GEN-LAST:event_txtTextoKeyTyped
 
