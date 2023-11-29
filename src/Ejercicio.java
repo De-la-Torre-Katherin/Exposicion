@@ -85,15 +85,18 @@ public class Ejercicio extends javax.swing.JFrame {
     private void txtTextoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTextoKeyTyped
         // TODO add your handling code here:
         
+        //para  poder ingresar un texto en el txt
         String texto = txtTexto.getText();
-        devuelve_Mayuscula(texto);
-                                  
- 
-    
+        //crear variable tipo string 
+        //llama la variable ya creada texto
       
+        devuelve_Mayuscula(texto);
     }//GEN-LAST:event_txtTextoKeyTyped
+   //metodo
     public void devuelve_Mayuscula(String texto){
+                                    //argumento
         String may;
+        //amecena el resultado 
         may=texto.toUpperCase();
         
         lblMensaje.setText(may);
